@@ -1,0 +1,121 @@
+<!-- Estimated:8  hours -->
+<!-- Actual:9 hours and still didn't finish -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- font awesome!-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- my custome css!-->
+  </head>
+
+  <body>
+    <!-- ----------------------------------------------all countries carousel -->
+    <section class="allCountries text-center">
+      <h1>Europe News</h1>
+      <div class="forgallery text-center">
+        <!--carousel div-->
+        <div
+          class="gallery js-flickity"
+          data-flickity-options='{ "wrapAround": true , "autoPlay": true ,"prevNextButtons": false , "freeScroll": true,
+      "contain": true,"pageDots": false}'
+        >
+        
+        </div>
+      </div>
+    </section>
+<!----------------------------------------------------country card------------------------------------------------- -->
+    <section id="forCountry"></section>
+    <!-- ----------------------------------------------country news------------------------------------------------ -->
+    <section class="forNews">
+      <div class="News-cell">
+        <div class="container newsSection"></div>
+      </div>
+    </section>
+
+<!-- ------------------------------------bootstrab js,pooper link---------------------------------- -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>                                 
+<!-- ---------------------------------------------------my 3 templates----------------------------------------- -->
+    <script id="newsTemplate" type="x-tmpl-mustache">
+
+              <div class="row myrow">
+                <div class="col-md-4">
+                  <div class="forImg">
+      <img src="{{Imgpath}}" alt="flag">
+                  </div>
+                </div>
+                <div class="col-md-8" >
+                  <div class="forNews-info">
+                    <h4 class="forHeadline">{{header}}</h4>
+                    <h6 class="forDetails m-4">{{details}}</h6>
+                    <p class="forSource">{{source}}</p>
+                    <p class="forDate">{{date}}</p>
+                  </div>
+                </div>
+              </div>
+    </script>
+    <script id="countryCardTemp" type="x-tmpl-mustache">
+      <div class="container m-5">
+        <div class="row myrow">
+          <div class="col-md-3">
+            <div class="clickedFlag">
+                <img src="{{flag}}" alt="">
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="forInfo">
+              <h2 class="forName">{{name}}</h2>
+              <p>Capital: <span class="forCapital">{{capital}}</span></p>
+              <p>Currency: <span class="forCurrency">{{currency}}</span></p>
+              <p>Language: <span class="forLanguage">{{language}}</span></p>
+              <p>Population: <span class="forPopulation">{{pop}}</span></p>
+              <p>Subregion: <span class="forSubregion">{{subreg}}</span></p>
+              <p>TimeZone: <span class="forTimeZone">{{timezone}}</span></p>
+              <p>Neighbors: <span class="forNeighbors">{{nibor}}</span></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script id="countriestemp" type="x-tmpl-mustache">
+      <div class="gallery-cell">
+        <div class="c-cell" title={{alpha3Code}} onclick="chooseCountry(event)">
+
+          <div class="c-flag" >
+            <img src=" {{flag}}" alt="">
+           </div>
+           <div class="c-info">
+            <p class="c-name">{{name}}</p>
+            <p class="c-capital">{{capital}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">
+  
+  </script> -->
+  </body>
+</html>

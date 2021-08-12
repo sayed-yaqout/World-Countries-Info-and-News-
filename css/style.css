@@ -1,0 +1,133 @@
+/* fonts */
+@font-face {
+  font-family: Roboto-bold;
+  src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Roboto-reg;
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Nunito-xbold;
+  src: url(../fonts/Nunito/Nunito-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Nunito-reg;
+  src: url(../fonts/Nunito/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: Nunito-bold;
+  src: url(../fonts/Nunito/Nunito-Bold.ttf);
+}
+/* CSS */
+body{
+  margin:0;
+  padding: 0;
+  background-color: hsl(213deg 71% 16%);
+  color: white;
+
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.head1 {
+  font-size: 49px;
+
+  font-family: Roboto-bold;
+}
+.title1 {
+  font-size: 28px;
+  font-family: Nunito-reg;
+  opacity: 80%;
+}
+.head2 {
+  font-size: 35px;
+  font-family: Nunito-xbold;
+  opacity: 80%;
+}
+.dom {
+  background-color: #384170;
+  border: 0;
+  
+  padding: .3rem;
+}
+
+
+.title2 {
+  font-size: 20px;
+}
+.title3 {
+  font-size: 23px;
+  font-family: Nunito-reg;
+}
+.font-nonitu {
+  font-family: Nunito-reg;
+}
+.myborder-bottom {
+  border-bottom: 1px solid #000;
+}
+.title4 {
+  font-family: Nunito-bold;
+  font-size: 23px;
+}
+
+
+
+.c-cell{
+  height:17rem;
+  width: 80%;
+  color: hsl(213deg 71% 16%) ;
+  background-color: white;
+ 
+}
+.c-flag{
+  height:130px;
+}
+.forgallery{
+  width: 60%;
+  margin: 0 auto;
+  border: rgba(255, 255, 255, 0.5) 1px solid;
+  padding: 20px;
+}
+
+.gallery-cell {
+  width: 90%;
+ 
+ 
+  counter-increment: gallery-cell;
+}
+/* make width 50% for any screen other than mobile screen */
+
+@media only screen and (min-width: 600px) {
+  /* for tablets */
+  .gallery-cell{
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px){
+  .gallery-cell{
+    width: 25%;
+  }
+
+  
+}
+.forCountry{
+  color: white;
+}
+.myrow{
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: rgba(255, 255, 255, 0.507) 1px solid;
+}
+
+.newsSection .myrow{
+  width: 65%;
+  
+
+}
+
