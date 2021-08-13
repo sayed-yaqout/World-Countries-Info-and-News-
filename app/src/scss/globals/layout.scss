@@ -1,11 +1,41 @@
+@use "../globals/colors.scss" as *;
+body{
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
 .container {
   margin: 0 auto;
 }
-.row {
+img {
+  width: 100%;
+  height: 100%;
 }
-.col {
+.c-cell{
+  height:17rem;
+  width: 80%;
+  background-color:$secondary-color;
+  color:  $primary-color;
+ 
+}
+.c-flag{
+  height:130px;
+}
+.forgallery, .myrow{
+  width: 60%;
+  margin: 0 auto;
+  border: $border-color 1px solid;
+  padding: 20px;
+}
+.gallery-cell {
+  width: 90%;
+  counter-increment: gallery-cell;
 }
 
 .margin-top-20 {
   margin-top: 20;
 }
+.w-65{
+  width: 65%;
+}
+
